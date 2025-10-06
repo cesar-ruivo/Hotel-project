@@ -4,7 +4,7 @@ import UIKit
 final class HomeViewController: UIViewController {
     //MARK: - configuracao inicial
     
-    private let filtro: [String] = ["Local", "preco", "Avaliacao", "Pontuacao", "Mais populares"]
+    private let filtro: [String] = ["Local", "Preço", "Avaliação", "Pontuação", "Mais populares"]
     
     private let visitadoRecentemente: [destinoRecente] = [
         destinoRecente(image: "destino-1", estado: "Rio de Janeiro", data: "20 de set - 29 de set", badge: "Quero visitar"),
@@ -28,7 +28,6 @@ final class HomeViewController: UIViewController {
     
     // MARK: - CompositionlLayout
     private lazy var homeCollectionView: UICollectionView = {
-        // A "fábrica" de layout começa aqui
         let layout = HomeLayoutFactory.createLayout()
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -77,7 +76,6 @@ final class HomeViewController: UIViewController {
                                   corDeFundo: UIColor(hex: "#bff2ec"),
                                   corDaBorda: UIColor(hex: "#86e38e"))
         default:
-            // Um estilo padrão para qualquer outro badge
             return BadgeViewModel(text: text,
                                   textColor: .darkGray,
                                   corDeFundo: .systemGray6,
@@ -160,7 +158,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
                         badgesParaExibir.append(PegarBadgeViewModel(for: texto)) // Usando sua função
                     }
                 }
-                // Chama o configure
                 cell.configure(with: hotel, with: badgesParaExibir)
                 
                 return cell

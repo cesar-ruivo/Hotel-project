@@ -31,7 +31,6 @@ class HomeLayoutFactory {
             case 2:
                 return self.createPopularHotelsSection()
             default:
-                // Retorna uma seção vazia por segurança
                 return NSCollectionLayoutSection(group: .horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(1)), subitems: []))
             }
         }, configuration: configuration)

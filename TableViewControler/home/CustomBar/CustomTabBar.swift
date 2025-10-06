@@ -1,10 +1,8 @@
 import UIKit
 
-// ... (protocolo CodeView) ...
 
 final class CustomTabBar: UIView {
 
-    // --- FUNDO E SEPARADOR ---
     private lazy var blurEffectView: UIVisualEffectView = {
         let efeito = UIBlurEffect(style: .systemMaterial)
         let view = UIVisualEffectView(effect: efeito)
@@ -27,10 +25,10 @@ final class CustomTabBar: UIView {
     // O avatar que já tínhamos
     private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "imagem-3") // Use o nome correto da sua imagem
+        imageView.image = UIImage(named: "imagem-4")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 16 // Metade de 32
+        imageView.layer.cornerRadius = 16
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()

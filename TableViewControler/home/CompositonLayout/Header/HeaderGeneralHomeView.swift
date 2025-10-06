@@ -15,14 +15,13 @@ class HeaderGeneralHomeView: UICollectionReusableView {
     
     private var subtituloLabel: UILabel = {
         let label = UILabel()
-        label.text = "Explore novos hoteis para sua viagem!"
+        label.text = "Explore novos hotéis para sua viagem!"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textColor = .systemGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    // O contêiner para a barra de busca
     private let searchBarContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
